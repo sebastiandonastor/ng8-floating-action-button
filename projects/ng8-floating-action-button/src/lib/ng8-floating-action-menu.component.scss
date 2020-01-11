@@ -264,7 +264,7 @@ $number-of-child-buttons: 10 !default;
   width: $main-button-size;
   z-index: 20;
 }
-:host ::ng-deep .mfb-component__button--child {
+::ng-deep .mfb-component__button--child {
   @extend %mfb-component__button;
   height: $child_button_size;
   width: $child_button_size;
@@ -279,8 +279,8 @@ $number-of-child-buttons: 10 !default;
   transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
 }
 // the icons for the main button
-:host ::ng-deep .mfb-component__child-icon,
-:host ::ng-deep .mfb-component__child-icon {
+::ng-deep .mfb-component__child-icon,
+::ng-deep .mfb-component__child-icon {
   @extend .mfb-component__icon;
   line-height: $child_button_size;
   font-size: 18 / 56 * $child_button_size;
@@ -337,7 +337,7 @@ $number-of-child-buttons: 10 !default;
  * each button (an anchor tag).
  */
 
-:host ::ng-deep [data-mfb-label]:after {
+::ng-deep [data-mfb-label]:after {
   content: attr(data-mfb-label);
   opacity: 0;
   transition: all $label-hover-off;
@@ -354,8 +354,8 @@ $number-of-child-buttons: 10 !default;
   margin-top: -($labels-padding-vertical + $labels-font-size / 2);
   transition: all $label-hover-off; // the label disappears at this speed
 }
-:host ::ng-deep [data-mfb-toggle='hover'] [data-mfb-label]:hover:after,
-:host ::ng-deep [data-mfb-state='open'] [data-mfb-label]:after {
+::ng-deep [data-mfb-toggle='hover'] [data-mfb-label]:hover:after,
+::ng-deep [data-mfb-state='open'] [data-mfb-label]:after {
   content: attr(data-mfb-label);
   opacity: 1;
   transition: all $label-hover-on; // the label appears at this speed
@@ -363,30 +363,30 @@ $number-of-child-buttons: 10 !default;
 /*------------------------------------*\
     #LABELS | Modifiers
 \*------------------------------------*/
-:host ::ng-deep .mfb-component--br,
+::ng-deep .mfb-component--br,
 .mfb-component--tr {
-  :host ::ng-deep [data-mfb-label]:after {
+  ::ng-deep [data-mfb-label]:after {
     content: attr(data-mfb-label);
     right: $button-label-space;
   }
 }
-:host ::ng-deep .mfb-component--br .mfb-component__list,
+::ng-deep .mfb-component--br .mfb-component__list,
 .mfb-component--tr .mfb-component__list {
-  :host ::ng-deep [data-mfb-label]:after {
+  ::ng-deep [data-mfb-label]:after {
     content: attr(data-mfb-label);
     right: $button-label-space - ($main-button-size - $child_button_size) / 2;
   }
 }
-:host ::ng-deep .mfb-component--tl,
+::ng-deep .mfb-component--tl,
 .mfb-component--bl {
-  :host ::ng-deep [data-mfb-label]:after {
+  ::ng-deep [data-mfb-label]:after {
     content: attr(data-mfb-label);
     left: $button-label-space;
   }
 }
-:host ::ng-deep .mfb-component--tl .mfb-component__list,
+::ng-deep .mfb-component--tl .mfb-component__list,
 .mfb-component--bl .mfb-component__list {
-  :host ::ng-deep [data-mfb-label]:after {
+  ::ng-deep [data-mfb-label]:after {
     content: attr(data-mfb-label);
     left: $button-label-space - ($main-button-size - $child_button_size) / 2;
   }
