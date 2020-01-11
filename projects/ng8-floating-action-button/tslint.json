@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ng8Fabx",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ng8-fabx",
+      "kebab-case"
+    ]
+  }
+}
